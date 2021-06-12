@@ -15,13 +15,13 @@ def get_month_decorator(func):
 
 @get_month_decorator
 def new_month(n):
-    a = {1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June", 7: "July", 8: "August",
-         9: "September", 10: "October", 11: "November", 12: "December"}
+    year = {1: "January", 2: "February", 3: "March", 4: "April", 5: "May", 6: "June", 7: "July", 8: "August",
+            9: "September", 10: "October", 11: "November", 12: "December"}
 
-    for month in a:
+    for month in year:
         if month == n:
             break
-    return a[n]
+    return year[n]
 
 
 b = new_month(13)
