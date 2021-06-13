@@ -1,5 +1,6 @@
+
 class PrimeIterator:
-    """Class to generate prime numbers from 1 to a number n"""
+    """Class to generate prime numbers from 1 to a number n using iterator"""
 
     def __init__(self, n):
         self.start = 1
@@ -18,10 +19,10 @@ class PrimeIterator:
         return self
 
     def __next__(self):
-        for number in range(self.current_value, self.n):
-            if self.is_prime(number):
-                self.current_value = number + 1
-                return number
+        for num in range(self.current_value, self.n):
+            if self.is_prime(num):
+                self.current_value = num + 1
+                return num
         raise StopIteration
 
 
@@ -34,5 +35,3 @@ print(next(j))
 print(next(j))
 print(next(j))
 print(next(j))
-
-
