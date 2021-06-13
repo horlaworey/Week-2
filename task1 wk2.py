@@ -35,3 +35,28 @@ print(next(j))
 print(next(j))
 print(next(j))
 print(next(j))
+
+
+# Using the concept of generators to redefine the PrimeIterator class above.
+
+
+def prime_generator(n):
+    """Function to generate prime numbers from 2 to a number n using generator"""
+    stop = n
+
+    # check if stop number is 1 or less
+    if stop <= 1:
+        return
+
+    for number in range(2, stop):
+        for num in range(2, number):
+            if number % num == 0:
+                break
+        else:
+            yield number
+
+
+for char in prime_generator(10):
+    print(char)
+
+    
